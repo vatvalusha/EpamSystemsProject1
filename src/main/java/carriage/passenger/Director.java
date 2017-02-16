@@ -16,7 +16,7 @@ public class Director {
     }
 
     public PassengerCoach buildCoach() {
-        coachBuilder.creatPassengerCoach();
+        coachBuilder.createPassengerCoach();
         coachBuilder.buildCapacity();
         coachBuilder.buildConvenience();
         coachBuilder.buildPrice();

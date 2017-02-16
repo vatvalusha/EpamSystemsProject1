@@ -12,7 +12,7 @@ public abstract class CoachBuilder {
         return passengerCoach;
     }
 
-    public void creatPassengerCoach() {
+    public void createPassengerCoach() {
         passengerCoach = new PassengerCoach();
     }
 

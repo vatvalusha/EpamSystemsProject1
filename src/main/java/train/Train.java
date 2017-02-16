@@ -22,13 +22,13 @@ public class Train {
     public void removeCoach() {
         if(coaches.isEmpty()) {
             System.out.println("Train is empty");
-            return;
+            throw new NullPointerException();
         }
         else
             coaches.remove(coaches.size() - 1);
     }
 
-    public int countFreeSeats() {
+  /*  public int countFreeSeats() {
         int counter = 0;
         for (PassengerCoach coach : coaches) {
             for (int i = 0; i < coach.getPeople().length; i++) {
@@ -37,7 +37,7 @@ public class Train {
         }
 
         return counter;
-    }
+    }*/
 
     public List<PassengerCoach> sortCoachLuxury(List<PassengerCoach> coach) {
         Collections.sort(coach, new PassengerCoach());
