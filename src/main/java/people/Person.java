@@ -8,21 +8,22 @@ public class Person {
     private int old;
     private int idTicket;
 
-    Person(int old,int idTicket){
+    Person(int old, int idTicket, String name) {
         this.old = old;
         this.idTicket = idTicket;
+        this.name = name;
     }
 
-    static int generateOld(){
-        return (int) (Math.random()*100);
+    static int generateOld() {
+        return (int) (Math.random() * 100);
     }
 
-    static int generateTicket(){
-        return (int) (Math.random()*1000);
+    static int generateTicket() {
+        return (int) (Math.random() * 1000);
     }
 
-   public static Person createPerson(){
-        return new Person(generateOld(),generateTicket());
+    public static Person createPerson() {
+        return new Person(generateOld(), generateTicket(), NamesSpace.randName());
     }
 
     public String getName() {

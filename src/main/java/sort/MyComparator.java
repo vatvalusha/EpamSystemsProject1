@@ -13,7 +13,7 @@ import java.util.function.ToLongFunction;
  */
 public class MyComparator implements Comparator<Convenience> {
     public int compare(Convenience o1, Convenience o2) {
-        return Integer.compare(o1.getPrior(),o2.getPrior());
+        return Integer.compare(o1.getPrior(), o2.getPrior());
     }
 
     public Comparator<Convenience> reversed() {

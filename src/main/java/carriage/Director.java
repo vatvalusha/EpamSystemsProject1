@@ -7,19 +7,24 @@ public class Director {
 
     private CoachBuilder coachBuilder;
 
-    public void setCoachBuilder(CoachBuilder coachBuilder){
+    public void setCoachBuilder(CoachBuilder coachBuilder) {
         this.coachBuilder = coachBuilder;
     }
-    public PassengerCoach getPassengerCoach(){
+
+    public PassengerCoach getPassengerCoach() {
         return coachBuilder.getPassengerCoach();
     }
 
-    public PassengerCoach buildCoach(){
+    public PassengerCoach buildCoach() {
         coachBuilder.creatPassengerCoach();
         coachBuilder.buildCapacity();
         coachBuilder.buildConvenience();
         coachBuilder.buildPrice();
+        coachBuilder.buildPeolpe();
+
+
         PassengerCoach passengerCoach = coachBuilder.getPassengerCoach();
+        passengerCoach.addPeople();
         return passengerCoach;
     }
 }

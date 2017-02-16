@@ -13,39 +13,39 @@ import java.util.Comparator;
  */
 public class TestCoach {
     public static void main(String[] args) {
-        ArrayList<PassengerCoach> list = new ArrayList<PassengerCoach>();
-        PassengerCoach[] passengerCoaches = new PassengerCoach[15];
-        for (int i = 0; i < passengerCoaches.length; i++) {
-            Director director = new Director();
-            director.setCoachBuilder(createrCoach());
-            passengerCoaches[i] = director.buildCoach();
-            list.add(passengerCoaches[i]);
+//        ArrayList<PassengerCoach> list = new ArrayList<PassengerCoach>();
+//        PassengerCoach[] passengerCoaches = new PassengerCoach[15];
+//        for (int i = 0; i < passengerCoaches.length; i++) {
+//            Director director = new Director();
+//            director.setCoachBuilder(createrCoach());
+//            passengerCoaches[i] = director.buildCoach();
+//            list.add(passengerCoaches[i]);
+//        }
+//
+////        System.out.println(list.size());
+//        for (PassengerCoach i : list) {
+//            System.out.println(i.getConvenience());
+//        }
+//
+//        Collections.sort(list, new PassengerCoach());
+//
+//        System.out.println("SORT");
+//        for (PassengerCoach i : list) {
+//            System.out.println(i.getConvenience());
+//        }
+
+        PassengerCoach passengerCoach = new PassengerCoach();
+        Director director = new Director();
+        director.setCoachBuilder(PassengerCoach.createrCoach());
+        passengerCoach = director.buildCoach();
+        System.out.println(passengerCoach.getPeople().length);
+        for (int i = 0; i < passengerCoach.getPeople().length; i++) {
+            System.out.print("N:" + i);
+            System.out.println(passengerCoach.getPeople()[i]);
         }
 
-//        System.out.println(list.size());
-        for (PassengerCoach i : list) {
-            System.out.println(i.getConvenience());
-        }
-
-        Collections.sort(list, new PassengerCoach());
-
-        System.out.println("SORT");
-        for (PassengerCoach i : list) {
-            System.out.println(i.getConvenience());
-        }
-
+//        System.out.println(passengerCoach);
     }
 
-    static CoachBuilder createrCoach() {
-        int i = (int) (Math.random() * 3);
-        switch (i) {
-            case 0:
-                return new LuxuryCoach();
-            case 1:
-                return new CoupeCoach();
-            case 2:
-                return new ReservedSeatCoach();
-        }
-        return null;
-    }
+
 }

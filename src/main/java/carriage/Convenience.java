@@ -4,9 +4,10 @@ package carriage;
  * Created by vatva on 14.02.2017.
  */
 public enum Convenience {
-    COUPE(2),LUXURY(1),RESERVED_SEAT(3);
+    COUPE(2), LUXURY(1), RESERVED_SEAT(3);
 
     int prior;
+
     Convenience(int i) {
         this.prior = i;
     }

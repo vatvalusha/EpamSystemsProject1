@@ -6,15 +6,21 @@ package carriage;
 
 /*Abstract Builder*/
 public abstract class CoachBuilder {
-   protected PassengerCoach passengerCoach;
-    public PassengerCoach getPassengerCoach(){
+    protected PassengerCoach passengerCoach;
+
+    public PassengerCoach getPassengerCoach() {
         return passengerCoach;
     }
-    public void creatPassengerCoach(){
+
+    public void creatPassengerCoach() {
         passengerCoach = new PassengerCoach();
     }
 
+    public abstract void buildPeolpe();
+
     public abstract void buildPrice();
+
     public abstract void buildCapacity();
+
     public abstract void buildConvenience();
 }

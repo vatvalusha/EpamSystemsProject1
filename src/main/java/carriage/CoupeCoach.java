@@ -1,15 +1,23 @@
 package carriage;
 
+import people.Person;
+
+import java.util.Set;
+
 /**
  * Created by vatva on 14.02.2017.
  */
 public class CoupeCoach extends CoachBuilder {
-    public void buildCapacity() {
+    public void buildConvenience() {
         passengerCoach.setConvenience(Convenience.COUPE);
     }
 
-    public void buildConvenience() {
+    public void buildCapacity() {
         passengerCoach.setCapacity(36);
+    }
+
+    public void buildPeolpe() {
+        passengerCoach.setPeople(passengerCoach.getPeople());
     }
 
     @Override

@@ -16,4 +16,8 @@ public class LuxuryCoach extends CoachBuilder {
     public void buildConvenience() {
         passengerCoach.setConvenience(Convenience.LUXURY);
     }
+
+    public void buildPeolpe() {
+        passengerCoach.setPeople(passengerCoach.getPeople());
+    }
 }
