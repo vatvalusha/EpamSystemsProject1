@@ -1,12 +1,7 @@
 package test;
 
-import carriage.*;
-import sort.MyComparator;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import carriage.passenger.Director;
+import carriage.passenger.PassengerCoach;
 
 /**
  * Created by vatva on 14.02.2017.

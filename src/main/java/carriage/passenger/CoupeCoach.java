@@ -1,8 +1,6 @@
-package carriage;
+package carriage.passenger;
 
-import people.Person;
-
-import java.util.Set;
+import carriage.Convenience;
 
 /**
  * Created by vatva on 14.02.2017.

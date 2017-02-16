@@ -1,4 +1,4 @@
-package carriage;
+package carriage.passenger;
 
 /**
  * Created by vatva on 14.02.2017.

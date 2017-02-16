@@ -1,5 +1,7 @@
-package carriage;
+package carriage.passenger;
 
+import carriage.Convenience;
+import carriage.RailwayСarriage;
 import people.Person;
 
 import java.util.*;

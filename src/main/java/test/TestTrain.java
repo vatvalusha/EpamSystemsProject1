@@ -1,6 +1,6 @@
 package test;
 
-import carriage.PassengerCoach;
+import carriage.passenger.PassengerCoach;
 import train.Train;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class TestTrain {
         List<PassengerCoach> distance =  train.findCoach(30,54);
         train.setCoaches(distance);
         for (PassengerCoach i : distance) {
-            System.out.println(i.getConvenience());
+            System.out.print(i.getConvenience() + "---");
         }
     }
 

@@ -1,4 +1,6 @@
-package carriage;
+package carriage.passenger;
+
+import carriage.Convenience;
 
 /**
  * Created by vatva on 14.02.2017.

@@ -16,7 +16,7 @@ public class CargoBuilder {
         return weight;
     }
 
-    Cargo build() {
+    public Cargo build() {
         Cargo cargo = new Cargo();
         cargo.setWeight(generateWeight());
         return cargo;

@@ -15,6 +15,10 @@ public class Cargo {
         return new CargoBuilder().build();
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return "Cargo: " +
