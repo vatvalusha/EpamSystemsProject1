@@ -1,5 +1,6 @@
 package train;
 
+import carriage.Convenience;
 import carriage.cargo.CargoCoach;
 import carriage.passenger.PassengerCoach;
 import org.junit.After;
@@ -60,7 +61,7 @@ public class TrainTest implements Comparator<PassengerCoach> {
         assertEquals(execute.size(), train.getCoaches().size());
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void removeCoachEmptyListTest() {
         train.removeCoach();
     }
@@ -76,7 +77,43 @@ public class TrainTest implements Comparator<PassengerCoach> {
         assertEquals(testList, train.getCoaches());
     }
 
+
     @Test
+    public void findCoachPeopleLuxury() {
+        for (int i = 0; i < 11; i++) {
+            train.getCoaches().add(Train.createCoach(passengerCoach));
+        }
+        train.sortCoachLuxury(train.getCoaches());
+        Convenience execute;
+        execute = Convenience.LUXURY;
+        assertEquals(execute, train.findCoach(0,15).get(0).getConvenience());
+    }
+
+    @Test
+    public void findCoachPeopleCoupe() {
+        for (int i = 0; i < 11; i++) {
+            train.getCoaches().add(Train.createCoach(passengerCoach));
+        }
+        train.sortCoachLuxury(train.getCoaches());
+        Convenience execute;
+        execute = Convenience.COUPE;
+        assertEquals(execute, train.findCoach(16,35).get(0).getConvenience());
+    }
+
+    @Test
+    public void findCoachPeopleReservedSeatTest() {
+        for (int i = 0; i < 11; i++) {
+            train.getCoaches().add(Train.createCoach(passengerCoach));
+        }
+        train.sortCoachLuxury(train.getCoaches());
+        Convenience execute;
+        execute = Convenience.RESERVED_SEAT;
+        assertEquals(execute, train.findCoach(36,54).get(0).getConvenience());
+    }
+
+
+
+        @Test
     public void countPeopleInTrainTest() {
         int i;
         train.getCoaches().add(Train.createCoach(passengerCoach));

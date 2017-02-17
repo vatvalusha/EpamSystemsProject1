@@ -1,6 +1,6 @@
 package train;
 
-import carriage.RailwayСarriage;
+//import carriage.RailwayСarriage;
 import carriage.cargo.CargoCoach;
 import carriage.cargo.DirectorCargo;
 import carriage.passenger.Director;
@@ -22,7 +22,7 @@ public class Train {
     public void removeCoach() {
         if(coaches.isEmpty()) {
             System.out.println("Train is empty");
-            throw new NullPointerException();
+            throw new IllegalArgumentException();
         }
         else
             coaches.remove(coaches.size() - 1);
@@ -59,6 +59,7 @@ public class Train {
         passengerCoach = director.buildCoach();
         return passengerCoach;
     }
+
 
     public List<PassengerCoach> findCoach(int min, int max) {
         List<PassengerCoach> coach = new ArrayList<PassengerCoach>();

@@ -21,7 +21,7 @@ public class TrainView {
 
     public void view() {
         int switcher = 0;
-        while (switcher != 8) {
+        while (switcher != 10) {
             System.out.println("1. Create train.");
             System.out.println("2. Count people in the train.");
             System.out.println("3. Sort luxury in the train.");
